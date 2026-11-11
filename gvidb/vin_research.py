@@ -11,7 +11,7 @@ import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
 
-from gvidb.db import connect, ROOT
+from gvidb.db import connect, ROOT, init_db
 
 API = "https://vpic.nhtsa.dot.gov/api/vehicles"
 SOURCE = "NHTSA vPIC / MID"
@@ -89,6 +89,7 @@ def now():
     return datetime.now(timezone.utc).isoformat()
 
 def init_research_db():
+    init_db()
     with connect() as db:
         db.executescript(SCHEMA)
         for name,publisher,url,geo,scope,access,role,notes in SEEDS:
