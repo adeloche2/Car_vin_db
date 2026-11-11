@@ -1,0 +1,15 @@
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+.DS_Store
+data/*.sqlite
+data/*.sqlite-*
+data/*.db
+data/*.csv
+data/*.part
+data/VEHICLESDB_ATTRIBUTION.md
+data/vin_sources/
