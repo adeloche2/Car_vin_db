@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GVIDB | تعريف المركبات</title><link rel="stylesheet" href="/static/style.css"></head>
+<body>
+<header><div class="logo">GVIDB <small>GLOBAL VEHICLE IDENTIFICATION DATABASE</small></div><div class="status" id="dbstate">فحص قاعدة البيانات...</div></header>
+<main>
+<section class="hero"><span>VIN INTELLIGENCE</span><h1>تعريف المركبات عبر رقم الهيكل</h1>
+<p>بحث تدريجي، كتالوج موديلات قابل للتحديث، ونتائج مرتبطة بمصادرها. لا يعرض النظام البيانات غير المؤكدة على أنها حقائق.</p></section>
+<nav><button class="tab active" data-tab="vin">فك رقم VIN</button><button class="tab" data-tab="catalog">كتالوج الموديلات</button></nav>
+<section id="vin" class="panel">
+<label for="vinInput">أدخل رقم VIN</label><div class="inputrow"><input id="vinInput" maxlength="17" dir="ltr" placeholder="17-character VIN" autocomplete="off"><button id="clear">مسح</button></div>
+<div class="meter"><span id="counter">0 / 17</span><span id="stage">بانتظار الإدخال</span></div><div class="bar"><i id="progress"></i></div>
+<div id="progressive" class="message neutral">ابدأ بكتابة أول خانات رقم الهيكل.</div>
+<div id="decodeResult"></div><button id="decodeBtn" class="primary" disabled>فك VIN كاملاً</button>
+</section>
+<section id="catalog" class="panel hidden">
+<h2>البحث في كتالوج المركبات</h2><p class="hint">الكتالوج مستقل عن فك VIN. يحتوي أسماء الموديلات والفئات والأسواق التي تتوفر لها بيانات.</p>
+<div class="inputrow"><input id="modelQuery" placeholder="ابحث باسم الشركة أو الموديل"><button id="modelSearch">بحث</button></div>
+<div id="catalogStats" class="message neutral">لم يتم تحميل كتالوج VehiclesDB بعد.</div><div id="modelResults"></div>
+<button id="importBtn" class="primary">تنزيل واستيراد كتالوج VehiclesDB</button>
+<p class="attribution">بيانات المركبات: <a href="https://vehiclesdb.com" target="_blank" rel="noopener">VehiclesDB</a> — CC BY 4.0. يلزم إبقاء الإسناد.</p>
+</section>
+<footer>GVIDB 2.0 · البيانات المحلية + NHTSA vPIC · اللون لا يُستنتج من الموديل</footer>
+</main><script src="/static/app.js"></script></body></html>
