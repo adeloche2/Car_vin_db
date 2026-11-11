@@ -1,0 +1,25 @@
+{
+  "rules": [
+    {
+      "manufacturer_name": "Manufacturer name exactly as documented",
+      "wmi": "ABC",
+      "vehicle_category": "motorcycle",
+      "model_name": "Model name if explicitly stated",
+      "model_year_from": 2020,
+      "model_year_to": 2024,
+      "vin_position_start": 5,
+      "vin_position_end": 5,
+      "field_name": "model_line",
+      "code_value": "A",
+      "decoded_value": "Example model line",
+      "match_pattern": null,
+      "rule_type": "position_code",
+      "confidence": "high",
+      "verification_status": "needs_review",
+      "evidence_excerpt": "Exact excerpt from the manufacturer's VIN document",
+      "source_name": "Manufacturer VIN decoding document",
+      "source_url": "https://example.org/vin-decoding-document.pdf",
+      "notes": "Template only. Replace all example values with source-verified information."
+    }
+  ]
+}
