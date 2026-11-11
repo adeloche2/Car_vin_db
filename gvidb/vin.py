@@ -10,7 +10,7 @@ WEIGHTS = [8,7,6,5,4,3,2,10,0,9,8,7,6,5,4,3,2]
 YEAR_CODES = "ABCDEFGHJKLMNPRSTVWXY123456789"
 
 def normalize(v):
-    return re.sub(r"[\\s-]","",(v or "").upper())
+    return re.sub(r"[\s-]","",(v or "").upper())
 
 def validate(v):
     v = normalize(v)
